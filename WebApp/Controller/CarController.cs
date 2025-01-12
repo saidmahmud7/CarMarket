@@ -11,9 +11,9 @@ public class CarController(ICarService service)
 {
     [HttpGet]
     public async Task<PaginationResponse<List<GetCarDto>>> GetAll([FromQuery]CarFilter filter,decimal? minPrice=0,decimal? maxPrice = 0, decimal? maxMilage=0,decimal? minMillage = 0) => await service.GetAll(filter);
-    [HttpGet("{dealerId}")]
+    [HttpGet("dealer{dealerId}")]
     public async Task<ApiResponse<List<GetCarDto>>> GetDealerWithCar([FromRoute]int dealerId)  => await service.GetDealerWithCar(dealerId);
-    [HttpGet("{brandId}")]
+    [HttpGet("brand{brandId}")]
     public async Task<ApiResponse<List<GetCarDto>>> GetBrandWithCar([FromRoute]int brandId)  => await service.GetBrandWithCar(brandId);
     [HttpGet("{id}")]
     public async Task<ApiResponse<GetCarDto>> GetCarById([FromRoute]int id) => await service.GetCarById(id);
