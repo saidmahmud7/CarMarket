@@ -21,7 +21,7 @@ public class CarService(DataContext context, IMapper mapper) : ICarService
         if (minMillage.HasValue)
             cars = cars.Where(c => c.Mileage >= minMillage);
         if (maxMilage.HasValue)
-            cars = cars.Where(c=>c.Mileage <= maxMilage);
+            cars = cars.Where(c=>c.Mileage <= maxMilage);  
         if (!string.IsNullOrEmpty(filter.Model))
             cars = cars.Where(c => c.Model.ToLower().Contains(filter.Model.ToLower()));
         if (filter.Year.HasValue)

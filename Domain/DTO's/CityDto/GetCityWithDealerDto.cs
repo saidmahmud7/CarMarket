@@ -1,4 +1,5 @@
-﻿using Domain.Filters;
+﻿using Domain.DTO_s.DealerDto;
+using Domain.Filters;
 
 namespace Domain.DTO_s.CityDto;
 
@@ -8,6 +9,6 @@ public record GetCityWithDealerDto
     public string Name { get; set; }
     public string Region { get; set; }
     public string Country { get; set; }
-    public List<Dealer> Dealers { get; set; }
+    public List<GetDealerDto> Dealers { get; set; }
 
 }

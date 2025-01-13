@@ -1,4 +1,6 @@
-﻿namespace Domain.DTO_s.BrandDto;
+﻿using Domain.DTO_s.CarDto;
+
+namespace Domain.DTO_s.BrandDto;
 
 public class GetBrandWithCarsDto
 {
@@ -7,6 +9,6 @@ public class GetBrandWithCarsDto
     public string Country { get; set; }
     public string LogoUrl { get; set; }
     public string Description { get; set; }
-    public List<Car> Cars { get; set; }
+    public List<GetCarDto> Cars { get; set; }
 
 }
